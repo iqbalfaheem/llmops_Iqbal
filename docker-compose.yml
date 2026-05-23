@@ -9,8 +9,8 @@ services:
     volumes:
       - ./chroma_data:/app/chroma_data
       - ./uploads:/app/uploads
-    expose:
-      - "8000"
+    ports:
+      - "8000:8000"
     networks:
       - app-net
 

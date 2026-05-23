@@ -69,7 +69,7 @@ pipeline {
                     sh '''
                         scp -o StrictHostKeyChecking=no docker-compose.yml $EC2_HOST:/home/ubuntu/docker-compose.yml
 
-                        ssh -o StrictHostKeyChecking=no ubuntu@$EC2_HOST "
+                        ssh -o StrictHostKeyChecking=no $EC2_HOST "
                             mkdir -p /home/ubuntu/chroma_data /home/ubuntu/uploads &&
                             export OPENAI_API_KEY='${OPENAI_API_KEY}' &&
                             cd /home/ubuntu &&
